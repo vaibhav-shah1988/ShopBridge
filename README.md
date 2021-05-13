@@ -13,9 +13,10 @@ Use database.sql to create Shopbridge database & related tables in your database
 
 <h2>Run Project</h2>
 <ul>
+	<li>right Click on "ShopBridge.API" -> Properties -> Web -> Start Action -> Select option "Don't open a page, Wait for a request from external application."</li>
 	<li>Set Multiple Startup Projects by going to below path</li>
 	 Right click Solution -> Properties -> Common Properties -> Startup Project -> Multiple startp projects -> Mark "Shopbridge.API" & "ShopBridge.UI" as startup projcts	
-	<li>Run Project by pressing <b>F5</b></li>
+	<li>Run Project by pressing <b>F5</b>. In case of Error Clean & Rebuild Solution </li>
 </ul>
 
 <hr/>
