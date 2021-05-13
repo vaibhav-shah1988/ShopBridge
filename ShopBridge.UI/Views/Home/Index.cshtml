@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ShopBridge.DAL.Entities.Inventory>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+
+<p class="text-right" style="margin-top:10px">
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div>
+    <table class="table" id="inventoryTable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.Label("Name")
+                </th>
+                <th>
+                    @Html.Label("Description")
+                </th>
+                <th>
+                    @Html.Label("Price")
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count() > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+                    </tr>
+
+                }
+            }
+            else
+            {
+            <td colspan="4" class="text-center"><b>No Data Available</b></td>
+
+        }
+            </tbody>
+        </table>
+</div>
+
+@section Scripts{
+    
+    <script>
+        $(document).ready(function () {
+            $('#inventoryTable').DataTable();
+        });
+    </script>
+    }
