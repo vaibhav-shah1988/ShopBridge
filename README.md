@@ -13,7 +13,7 @@ Use database.sql to create Shopbridge database & related tables in your database
 
 <h2>Run Project</h2>
 <ul>
-	<li>Set Multiple Startup Projects by goin to below path</li>
+	<li>Set Multiple Startup Projects by going to below path</li>
 	 Right click Solution -> Properties -> Common Properties -> Startup Project -> Multiple startp projects -> Mark "Shopbridge.API" & "ShopBridge.UI" as startup projcts	
 	<li>Run Project by pressing <b>F5</b></li>
 </ul>
