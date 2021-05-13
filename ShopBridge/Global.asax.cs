@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ShopBridge.DAL.Repositories;
+using ShopBridge.DAL.Repositories.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +20,9 @@ namespace ShopBridge
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            
         }
+    
     }
 }

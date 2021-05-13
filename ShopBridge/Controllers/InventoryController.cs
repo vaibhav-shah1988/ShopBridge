@@ -13,9 +13,9 @@ namespace ShopBridge.Controllers
     public class InventoryController : ApiController
     {
         private IInventoryRepository _inventoryRepository;
-        public InventoryController()
+        public InventoryController(IInventoryRepository inventoryRepository)
         {
-            _inventoryRepository = new InventoryRepository();
+            _inventoryRepository = inventoryRepository;
         }
 
         [HttpGet]
