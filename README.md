@@ -36,7 +36,9 @@ Use database.sql to create Shopbridge database & related tables in your database
 <hr/>
 
 <h2>Time Tracking</h2>
-1. Data store design - 1.5 Hours
-2. API and service logic - 2 Hours
-3. UI - 2 Hours
-4. Unit Test Coverage - 1 Hour
+<ol>
+	<li>Data store design - 1.5 Hours</li>
+	<li>API and service logic - 2 Hours</li>
+	<li>UI - 2 Hours</li>
+	<li>Unit Test Coverage - 1.5 Hour</li>
+	</ol>
