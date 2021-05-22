@@ -33,5 +33,12 @@ Use database.sql to create Shopbridge database & related tables in your database
 <h4>Edit Inventory</h4>
 ![edit](https://user-images.githubusercontent.com/6494014/118109040-4d9afc80-b3fe-11eb-9821-d17f796f12b3.png)
 
+<hr/>
 
-
+<h2>Time Tracking</h2>
+<ol>
+	<li>Data store design - 1.5 Hours</li>
+	<li>API and service logic - 2 Hours</li>
+	<li>UI - 2 Hours</li>
+	<li>Unit Test Coverage - 1.5 Hour</li>
+	</ol>
