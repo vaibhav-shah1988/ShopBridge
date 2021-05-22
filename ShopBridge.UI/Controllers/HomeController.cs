@@ -40,10 +40,21 @@ namespace ShopBridge.UI.Controllers
 
             var response = client.Get(request);
 
-            Inventory inv = JsonConvert.DeserializeObject<Inventory>(response.Content);
-
-            return View("AddEdit", inv);
-
+            if(response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                Inventory inv = JsonConvert.DeserializeObject<Inventory>(response.Content);
+                return View("AddEdit", inv);
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                ViewBag.ErrorMsg = "No data found.";
+                return View("AddEdit", null);
+            }
+            else
+            {
+                ViewBag.ErrorMsg = "An Error Occured while fetching data.";
+                return View("AddEdit", null);
+            }
         }
 
         [HttpPost]

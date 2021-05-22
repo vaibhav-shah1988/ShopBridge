@@ -17,7 +17,10 @@ namespace ShopBridge.Controllers
         {
             _inventoryRepository = inventoryRepository;
         }
-
+        /// <summary>
+        /// Gets List of All Inventory
+        /// </summary>
+        /// <returns>List of Inventory Object</returns>
         [HttpGet]
         public IQueryable<Inventory> GetAllInventory()
         {
@@ -25,6 +28,11 @@ namespace ShopBridge.Controllers
             return inv;
         }
 
+        /// <summary>
+        /// Gets single Inventory bsed on inventoryid
+        /// </summary>
+        /// <param name="Id">InventoryId</param>
+        /// <returns> HTTP result </returns>
         [HttpGet]
         public IHttpActionResult GetInventory(int Id)
         {
@@ -39,9 +47,9 @@ namespace ShopBridge.Controllers
 
                 return Ok(inv);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return InternalServerError();
+                return InternalServerError(ex);
             }
         }
 
@@ -60,9 +68,9 @@ namespace ShopBridge.Controllers
 
                 return Ok();
             }
-            catch (System.Exception)
+            catch (Exception ex)
             {
-                return InternalServerError();
+                return InternalServerError(ex);
             }
 
         }
@@ -76,9 +84,9 @@ namespace ShopBridge.Controllers
 
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return InternalServerError();
+                return InternalServerError(ex);
             }
         }
     }

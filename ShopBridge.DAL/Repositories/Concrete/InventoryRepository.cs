@@ -9,7 +9,10 @@ namespace ShopBridge.DAL.Repositories.Concrete
 {
     public class InventoryRepository : IInventoryRepository
     {
-
+        /// <summary>
+        /// Deletes Inventory based on Id
+        /// </summary>
+        /// <param name="Id">Inventory Id</param>
         public void DeleteInventory(int Id)
         {
             using (ShopBridgeEntities shopBridge = new ShopBridgeEntities())
@@ -20,6 +23,10 @@ namespace ShopBridge.DAL.Repositories.Concrete
             }
         }
 
+        /// <summary>
+        /// Get List of Inventory
+        /// </summary>
+        /// <returns></returns>
         public IQueryable<Inventory> GetAllInventory()
         {
             using(ShopBridgeEntities shopBridge = new ShopBridgeEntities())
@@ -28,6 +35,11 @@ namespace ShopBridge.DAL.Repositories.Concrete
             }
         }
 
+        /// <summary>
+        /// Get inventory based on Id
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
         public Inventory GetInventory(int Id)
         {
             using (ShopBridgeEntities shopBridge = new ShopBridgeEntities())
@@ -36,6 +48,10 @@ namespace ShopBridge.DAL.Repositories.Concrete
             }
         }
 
+        /// <summary>
+        /// Insert or update Inventory 
+        /// </summary>
+        /// <param name="inventory">Inventory object</param>
         public void SaveInventory(Inventory inventory)
         {
             using (ShopBridgeEntities shopBridge = new ShopBridgeEntities())
